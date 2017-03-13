@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('content')
+<body style ="background-color: white !important">
 
 
 <nav class="navbar navbar-default">
@@ -30,8 +30,8 @@
 <div class="container">
 	<div class="navbar">
 	  <ul class="nav nav-justified" id="myNav">
-	    <li><a class="active" href="index.html">Home</a></li>
-	    <li><a href="shop.html">Shop</a></li>
+	    <li><a class="active" href="#">Home</a></li>
+            <li><a href="{{ url('/shop') }}">Shop</a></li>
 	    <li><a href="#">About us</a></li>
 	    <li><a href="#">Contact Us</a></li>
 	  </ul>
@@ -113,18 +113,19 @@
                 <div class="modal-body">                                       
                 <div class="col-md-6 col-sm-6 no-padng">
                     <div class="model-l">                    
-                    <form method="post" id="logFrm" class="log-frm" name="logFrm"> 
-                    <ul>                                                     
+                    <form method="post" action = "{{ url('/create') }}"id="logFrm" class="log-frm" name="logFrm"> 
+                    <ul>           
+                        {{csrf_field()}}
                         <li>Username</li>
                         <li> <input type="text" placeholder="Username" id="userName" name="userName" class="form-control" onfocus="checkNullProf();"></li>
                         <li>Password</li>
                         <li><input type="password" placeholder="Password" id="password" name="password" class="form-control" onfocus="checkNullProf();"></li>                                                
-                        <li><br/><button type="button" onclick="userLogin();" id="logBtn" class="btn btn-default">Submit</button></li>
+                        <li><br/><input type="submit" id="logBtn" class="btn btn-default"></li>
                         <div style="display:none;" id="loginFail" class="sign">
                         <li> <font color="red">  Username or password is incorrect.</font></li>
                         </div>
                            </ul>
-                            </form>                      
+                    </form>                      
                                 <div class="clearfix"></div>
                                  <form method="post" id="logFrm1" class="log-frm" name="logFrm1"> 
                                 <ul>                                    
@@ -193,18 +194,18 @@
 </center>
 
 <script>
-	function ayantoggle(){
+    function ayantoggle(){
     $(".forgot").slideToggle('slow');
   }
 
-  function userLogin(){
-  	if ($('#userName').val() == 'admin' || $('#userName').val() == 'administrator') {
-      window.location = 'dashboard.html';
-    }
-    else{
-      alert('You are unauthorized to access here');
-    }
-  }
+//  function userLogin(){
+//  	if ($('#userName').val() == 'admin' || $('#userName').val() == 'administrator') {
+//      window.location = 'dashboard.html';
+//    }
+//    else{
+//      alert('You are unauthorized to access here');
+//    }
+//  }
 </script>
 
-@endsection
+</body>

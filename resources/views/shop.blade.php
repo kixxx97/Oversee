@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('content')
+<body style ="background-color: white !important">
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -29,8 +29,8 @@
 <div class="container">
 	<div class="navbar">
 	  <ul class="nav nav-justified" id="myNav">
-	    <li><a href="index.html">Home</a></li>
-	    <li><a class="active" href="shop.html">Shop</a></li>
+	    <li><a href="{{url('/')}}">Home</a></li>
+	    <li><a class="active" href="#">Shop</a></li>
 	    <li><a href="#">About us</a></li>
 	    <li><a href="#">Contact Us</a></li>
 	  </ul>
@@ -399,4 +399,4 @@
   }
 </script>
 
-@endsection
+<body style ="background-color: white !important">
