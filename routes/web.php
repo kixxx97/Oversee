@@ -51,4 +51,6 @@ Route::get('/supplier', function () {
 Route::get('/viewjoborder', function () {
     return view('viewjoborder');
 });
-
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
