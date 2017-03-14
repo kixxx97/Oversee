@@ -15,50 +15,22 @@
         <table id="table1" class="table-hover">
         <thead>
           <tr>
-            <th></th>          
             <th>Supplier ID</th>
             <th>Supplier Name</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><button type ="button" class="btn">View</button></td>
-            <td>001</td>
-            <td>CHINA WAX</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td><button type ="button" class="btn">View</button></td>
-            <td>002</td>
-            <td>CHINA WAX</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td><button type ="button" class="btn">View</button></td>
-            <td>003</td>
-            <td>CHINA WAX</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td><button type ="button" class="btn">View</button></td>
-            <td>004</td>
-            <td>CHINA WAX</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-           <tr>
-            <td><button type ="button" class="btn">View</button></td>
-            <td>005</td>
-            <td>CHINA WAX</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>     
-        </tbody>
+            <tbody>
+            @foreach ($suppliers as $supplier)
+              <tr>
+                <td>{{ $supplier->id }}</td>
+                <td>{{ $supplier->name }}</td>
+                <td><button type="button" class="edit" value="{{'supplier/'.$supplier->id.'/updateSupplier'}}">Edit</button></td>
+                <td><button type="button" class="delete" value="{{'supplier/'.$supplier->id.'/deleteSupplier'}}">Delete</button></td>
+              </tr>   
+            @endforeach
+            </tbody>
       </table>
       </div>
     </div>
@@ -108,11 +80,28 @@ $(document).ready(function(){
                   }
               }
     });
+    
+    $("#table1").on("click", ".delete" , function()
+    {
+       var id  = $(this).closest('.delete').val();
+       
+       if (confirm('Do you want to delete this supplier?'))
+       {
+           window.location = id;
+       }
+    });
+    
+    $("#table1").on("click", ".edit" ,function()
+    {
+       var id = $(this).closest('.edit').val();
+       window.location = id;
+    });
 });
 
 function addSupplier()
 {
   $("#addSupplierModal").modal("show");
+  
 }
 
 </script>

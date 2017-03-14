@@ -297,7 +297,8 @@ $(document).ready(function(){
                 "sPrevious": "<i style='position: relative; top:2px;' class='fa fa-angle-left'></i>"
                   }
               }
-    });    
+    });
+    
 });
 $(function()
 {

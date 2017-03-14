@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 <body style ="background-color: white !important">
+        <link rel="stylesheet" type="text/css" href="assets/testCSS/homestyle.css">
 
 @include('includes.navbarLogin')
 <br><br>

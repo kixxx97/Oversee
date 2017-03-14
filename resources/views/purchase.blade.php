@@ -16,35 +16,21 @@
           <tr>          
             <th>View</th>
             <th>Purchase ID</th>
-            <th>Purchase Order Name</th>
+            <th>Requested By</th>
+            <th>Received By</th>
             <th>Status</th>
           </tr>
         </thead>
         <tbody>
+          @foreach ($purchases as $purchase)
           <tr>
-          <td><a href="#"><button type ="button" class="btn">View</button></a></td>
-            <td>001</td>
-            <td>BOTTLE</td>
-            <td>OK</td>
+            <td><button type ="button" class="btn view" val="{{ 'purchase/'.$purchase->id.'/viewPurchase' }}">View</button></td>
+            <td>$purchase->id</td>
+            <td>$purchase->reqBy</td>
+            <td>$purchase->recBy</td>
+            <td>$purchase->status</td>
           </tr>
-           <tr>
-           <td><a href="#"><button type ="button" class="btn">View</button></a></td>
-            <td>002</td>
-            <td>BOTTLE</td>
-            <td>OK</td>
-          </tr>
-           <tr>
-           <td><a href="#"><button type ="button" class="btn">View</button></a></td>
-            <td>003</td>
-            <td>BOTTLE</td>
-            <td>OK</td>
-          </tr>
-            <tr>
-            <td><a href="#"><button type ="button" class="btn">View</button></a></td>
-            <td>004</td>
-            <td>BOTTLE</td>
-            <td>OK</td>
-          </tr>          
+          @endforeach
         </tbody>
       </table>
       </div>
@@ -84,6 +70,7 @@
 </div>
 <!-- End of Modal -->
 
+
 </body>
 
 <script>
@@ -96,6 +83,13 @@ $(document).ready(function(){
                 "sPrevious": "<i style='position: relative; top:2px;' class='fa fa-angle-left'></i>"
                   }
               }
+    });
+    
+    $("#table1").on("click" , ".view" , function()
+    {
+        var id = $(this).closest('.view').val();
+        
+        window.location = id;
     });
 });
 function addPurchase()
