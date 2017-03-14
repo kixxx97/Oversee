@@ -54,3 +54,7 @@ Route::get('/viewjoborder', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

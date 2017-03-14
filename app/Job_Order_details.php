@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Job_Order_details extends Model
 {
-    //
+    protected $table = 'job_order_details';
 }
