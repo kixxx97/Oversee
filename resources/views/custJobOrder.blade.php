@@ -30,7 +30,7 @@
           <tr>
             <td><button type ="button" class="btn view" value="{{ 'checkprod/'.$checkprod->id.'/viewjoborder'}}">View</button></td>
             <td>{{$customerorder->id}}</td>
-            <td>{{$customerorder->name}}</td>
+            <td>{{$customerorder->type}}</td>
             <td>{{$customerorder->percentage}}</td>
             <td>{{$customerorder->updateDate}}</td>
           </tr>

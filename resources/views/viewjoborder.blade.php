@@ -17,10 +17,10 @@
     <div class="panel panel-default">
       <div class="panel-heading">
       	<p style="text-decoration: underline;">DETAILS</p>
-      	Job Order ID : 200 <br>
-      	Type : Customer (Name) / Stock <br>
-      	Products to be Made : 1000 <br>
-      	Deadline : <br>
+      	Job Order ID : $joborder->id <br>
+      	Type : $jobrder->type , $joborder->name <br>
+      	Products to be Made : $joborder->quantity <br>
+      	Deadline : $joborder->deliveryDateTime <br>
       </div>
       <div class="panel-body">
         <table id="table1" class="table-hover">
@@ -34,46 +34,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-            <button type ="button" class="btn" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
-            <button type ="button" class="btn" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
-            </td>
-            <td>001</td>
-            <td>Cherry Anne Retuya</td>
-            <td>400</td>
-            <td>January 17, 2017</td>
-          </tr>
-          <tr>
-            <td>
-            <button type ="button" class="btn" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
-            <button type ="button" class="btn" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
-            </td>
-            <td>002</td>
-            <td>Kirster Kyle Quinio</td>
-            <td>300</td>
-            <td>January 17, 2017</td>
-          </tr> 
-          <tr>
-            <td>
-            <button type ="button" class="btn" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
-            <button type ="button" class="btn" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
-            </td>
-            <td>003</td>
-            <td>Franz Paran</td>
-            <td>100</td>
-            <td>January 17, 2017</td>
-          </tr> 
-          <tr>
-            <td>
-            <button type ="button" class="btn" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
-            <button type ="button" class="btn" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
-            </td>
-            <td>004</td>
-            <td>Gil Canedo</td>
-            <td>100</td>
-            <td>January 17, 2017</td>
-          </tr>                      
+            @foreach($employees as $employee)
+            <tr>
+              <td>
+              <button type ="button" class="btn view" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
+              <button type ="button" class="btn check" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
+              </td>
+              <td>$employee->id</td>
+              <td>$employee->name</td>
+              <td>$employee->productionQuantity</td>
+              <td>$employee->accomplishedDateTime</td>
+            </tr>   
+          @endforeach
         </tbody>
       </table>
       </div>
@@ -87,8 +59,8 @@
       <div class="panel-heading">
       <button type="button" style="float:right;" onclick="closeDetails();">Close</button>
       	<p style="text-decoration: underline;">EMPLOYEE'S DETAILS</p>
-      	Employee ID :  <br>
-      	Name of Employee : 	 <br>
+      	Employee ID : $employee->id <br>
+      	Name of Employee: $employee->name <br>
       </div>
       <div class="panel-body">
         <table id="table2" class="table-hover">
@@ -100,26 +72,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>130</td>
-            <td>January 17, 2017</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>100</td>
-            <td>January 16, 2017</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>100</td>
-            <td>January 15, 2017</td>
-          </tr>                              
-          <tr>
-            <td>4</td>
-            <td>100</td>
-            <td>January 14, 2017</td>
-          </tr>
+            @foreach ($productivities as $productivity)
+            <tr>
+              <td>$productivity->prodID</td>
+              <td>$productivity->quantity</td>
+              <td>$productivity->accomplishedDateTime</td>
+            </tr>
+          @endforeach
         </tbody>
       </table>
       </div>
@@ -147,7 +106,7 @@
           </div>
         </div>
         <div class="modal-footer">     
-          <button type="submit" class="btn btn-primary btnsubmit">Submit</button>
+          <button type="submit" class="btn btn-primary btn submit">Submit</button>
           <button type="button" class="btn btn-danger btnclose" data-dismiss="modal">Cancel</button>
         </div>
       </div>
