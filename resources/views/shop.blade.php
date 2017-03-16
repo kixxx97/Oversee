@@ -20,9 +20,11 @@
 </div>
 
 <div class="container-fluid">
+    <form action = "{{ url('shop/create') }}" method = "POST">
+        {{csrf_field()}}
+
 	<div class="container">
 	<div class="col-md-4">
-		<form>
 			<label class="pull-left">First Name</label>
 			<input type="text" class="form-control">
 
@@ -37,7 +39,6 @@
 
 			<label class="pull-left">Complete Address</label>
 			<input type="text" class="form-control">
-		</form>
 	</div>
 		
 	</div>
@@ -83,7 +84,8 @@
 		</div>
 
 	</div>
-
+        <input type ="submit" name ="cart" value ="Purchase!"/>
+    </form>
 	<br><br>
 	<center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shoppingCart">Confirm</button></center>
 	

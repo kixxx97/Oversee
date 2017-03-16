@@ -55,6 +55,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::post('/shop/create','oversee@cart');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
