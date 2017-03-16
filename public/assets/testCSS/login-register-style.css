@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 15, 2017, 12:01:35 AM
+    Author     : ROG
+*/
+
+.navbar-brand{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.navbar-default{
+    background: #222;
+    height: 53px;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: #fff;
+    font-weight: 600;
+}
+
+.panel{
+    padding: 30px;
+}
+
+.panel-heading{
+    font-size: 21px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Calibri;
+}
+
+.panel-body{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    padding-left: 50px;   
+}
+
+.btn-primary{
+    background: #1774D1;
+    border-color: #1774D1;
+    border-radius: 2px;
+    letter-spacing: 2px;
+}
+
+.btn-link{
+    color: #1774D1;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+    color: #fff;
+    border-bottom: 2px solid #1774D1;    
+}
+
+label{
+    letter-spacing: 1px;
+    font-family: century gothic;
+}
+
+input{
+    letter-spacing: 1px;
+    font-family: century gothic;
+}
+
+@media only screen
+and (min-width : 768px) {
+    .login-container{
+        margin: 6.5% auto;
+    }
+    
+    .register-container{
+        margin: 4.5% auto;
+    }
+    
+}
+
+

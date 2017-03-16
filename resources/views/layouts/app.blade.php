@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
@@ -12,7 +13,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="assets/testCSS/login-register-style.css">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -36,7 +37,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Oversee
                     </a>
                 </div>
 

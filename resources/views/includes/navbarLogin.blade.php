@@ -12,9 +12,8 @@
       <li><a href="#"><img class="socialIcons" src="assets/img/googleplus.png"></a></li>
       <li><a href="#"><img class="socialIcons" src="assets/img/pinterest.png"></a></li>
       <li><a href="#"><img class="socialIcons" src="assets/img/linkedin.png"></a></li>
-      <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="signin pull-right">Sign In</span></a></li>
-      <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="slash pull-right">/</span></a></li>
-      <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="register pull-right">Register</span></a></li>
+      <li><a href="{{ route('login') }}" ><span class="signin pull-right">Login</span></a></li>
+      <li><a href="{{ route('register') }}" ><span class="register pull-right">Register</span></a></li>
     </ul>
   </div>
 </nav>
