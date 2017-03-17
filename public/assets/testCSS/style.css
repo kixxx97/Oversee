@@ -297,7 +297,12 @@ body{
 .finishedproducttable{
   position: fixed;
   top: 150px;
-  left: 200px;
+  left: 215px;
+}
+
+#rawmats{
+    position: fixed;
+    left: 30px;
 }
 
 .newEmployeeModal{
@@ -351,4 +356,9 @@ body{
 
 .modal-content{
   border-radius: 0px !important;
+}
+
+.coke-product{
+    width: 200px !important;
+    border: 0 !important;
 }

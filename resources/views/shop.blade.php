@@ -5,7 +5,8 @@
 @include('includes.navbarLogin')
 <br><br>
 <center>
-<h1 class="company">Company Name</h1>
+    <img class="img-responsive" style="width: 400px;" src="assets/img/coca_cola_logo.png">
+    <br>
 <br><br><br>
 
 <div class="container">
@@ -47,17 +48,17 @@
 		<br><br><br>
 		<br>
 		
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Small Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_classic.png"><br><span class="itemName"><br>Coca-Cola Classic</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
 
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Medium Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_zero.png"><br><span class="itemName"><br>Coca-Cola Zero</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
 
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Large Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/sprite-soda-can.jpg"><br><span class="itemName"><br>Sprite</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
@@ -68,23 +69,23 @@
 		<br><br><br>
 		<br>
 		
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Small Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_caffeine_free.png"><br><span class="itemName"><br>Caffeine-Free Coca-Cola Zero</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
 
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Medium Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_diet.png"><br><span class="itemName"><br>Coca-Cola Diet</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
 
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Large Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_cherry_zero.png"><br><span class="itemName"><br>Coca-Cola Cherry Zero</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
 
-	</div>
-        <input type ="submit" name ="cart" value ="Purchase!"/>
+	</div><br><br>
+        <input type ="submit" class="btn btn-success" name ="cart" value ="Purchase!"/>
     </form>
 	<br><br>
 	<center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shoppingCart">Confirm</button></center>
@@ -113,7 +114,7 @@
 			<button type="button" class="btn colorblue">Subscribe</button>
 		</div>
 	</div>
-
+        <br>
 </div>
 
   <!-- Modal -->

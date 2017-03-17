@@ -24,11 +24,9 @@
                   <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke.jpg"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_classic.png"></center>
                           <br>
-                          <h4>Lorem Ipsum Dolor</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore</p>
+                          <h4>Coca-Cola Classic</h4>
                           <span>Quantity:</span>
                           <input type="text">
                           <br><br>
@@ -37,11 +35,9 @@
                   <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke.jpg"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_zero.png"></center>
                           <br>
-                          <h4>Lorem Ipsum Dolor</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore</p>
+                          <h4>Coca-Cola Zero</h4>
                           <span>Quantity:</span>
                           <input type="text">
                           <br><br>
@@ -50,11 +46,9 @@
                   <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke.jpg"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/sprite-soda-can.jpg"></center>
                           <br>
-                          <h4>Lorem Ipsum Dolor</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore</p>
+                          <h4>Sprite</h4>
                           <span>Quantity:</span>
                           <input type="text">
                           <br><br>
@@ -63,11 +57,9 @@
                   <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke.jpg"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_caffeine_free.png"></center>
                           <br>
-                          <h4>Lorem Ipsum Dolor</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore</p>
+                          <h4>Caffeine-Free Coca-Cola Zero</h4>
                           <span>Quantity:</span>
                           <input type="text">
                           <br><br>
@@ -80,11 +72,9 @@
                   <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke.jpg"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_cherry_zero.png"></center>
                           <br>
-                          <h4>Lorem Ipsum Dolor</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore</p>
+                          <h4>Coca-Cola Cherry Zero</h4>
                           <span>Quantity:</span>
                           <input type="text">
                           <br><br>
@@ -93,11 +83,9 @@
                   <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke.jpg"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_diet.png"></center>
                           <br>
-                          <h4>Lorem Ipsum Dolor</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore</p>
+                          <h4>Coca-Cola Diet</h4>
                           <span>Quantity:</span>
                           <input type="text">
                           <br><br>
@@ -106,11 +94,9 @@
                   <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke.jpg"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_classic.png"></center>
                           <br>
-                          <h4>Lorem Ipsum Dolor</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore</p>
+                          <h4>Coca-Cola Classic</h4>
                           <span>Quantity:</span>
                           <input type="text">
                           <br><br>
@@ -119,11 +105,9 @@
                   <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke.jpg"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_zero.png"></center>
                           <br>
-                          <h4>Lorem Ipsum Dolor</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore</p>
+                          <h4>Coca-Cola Zero</h4>
                           <span>Quantity:</span>
                           <input type="text">
                           <br><br>
