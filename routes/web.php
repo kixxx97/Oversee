@@ -16,48 +16,22 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/shop', function () {
-    return view('shop');
-});
-
-Route::post('/create', 'oversee@create');
-Route::get('/checkprod', function () {
-    return view('checkprod');
-});
-Route::get('/custjoborder', function () {
-    return view('custJobOrder');
-});
-Route::get('/employee', function () {
-    return view('employee');
-});
-Route::get('/inventory', function () {
-    return view('inventory');
-});
-Route::get('/joborder', function () {
-    return view('joborder');
-});
-Route::get('/purchase', function () {
-    return view('purchase');
-});
-Route::get('/reports', function () {
-    return view('reports');
-});
-Route::get('/stockjoborder', function () {
-    return view('stockJobOrder');
-});
-Route::get('/supplier', function () {
-    return view('supplier');
-});
-Route::get('/viewjoborder', function () {
-    return view('viewjoborder');
-});
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
+Route::get('/shop', 'oversee@shop');
+Route::get('/custjoborder','oversee@custJobOrder');
+Route::get('/employee','oversee@employee');
+Route::get('/inventory','oversee@inventory');
+Route::get('/joborder','oversee@jobOrder');
+Route::get('/purchase','oversee@purchase');
+Route::get('/reports','oversee@report');
+Route::get('/stockjoborder','oversee@stockJobOrder');
+Route::get('/supplier', 'oversee@supplier');
+Route::get('/viewjoborder','oversee@viewJobOrder');
+Route::get('/dashboard','oversee@dashboard');
 Route::post('/shop/create','oversee@cart');
 Route::post('/inventory/rawmats/create','oversee@rawMatsCreate');
 Route::post('/inventory/prod/create','oversee@prodCreate');
+Route::get('/rawmats/{id}/edit','oversee@editRawMat');
+Route::get('/prod/{id}/edit', 'oversee@editProduct');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

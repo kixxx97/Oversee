@@ -38,127 +38,18 @@
                   <th>Delete</th>
                 </tr>
               </thead>
+              
               <tbody>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>Bottle</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
+              @foreach($rawMats as $rawMat)
+              <tr>
+                  <td>{{$rawMat->rawMaterialName}}</td>
+                  <td>{{$rawMat->rawMaterialDescription}}</td>
+                  <td>{{$rawMat->quantityAvailable}}</td>
+                  <td>{{$rawMat->reOrderPoint}}</td>
+                  <td><a href="{{ 'rawMats/'.$rawMat->rawMaterialsID.'/edit' }}"><span class ="glyphicon glyphicon-edit"</span></td>
+                  <td>help</td>
+              </tr>
+              @endforeach
               </tbody>
             </table>
           </div>
@@ -174,135 +65,25 @@
             <table id="tableFinishedProducts" class="table-hover">
               <thead>
                 <tr>
-                  <th>Product ID</th>
                   <th>Product Name</th>
+                  <th>Product Description</th>
                   <th>Inventory Count</th>
-                  <th>Reorder Point</th>
+                  <th>Unit Price</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Coke 8 oz</td>
-                  <td>200pcs</td>
-                  <td>150</td>
-                  <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-                </tr>
+            @foreach($products as $product)
+              <tr>
+                  <td>{{$product->productName}}</td>
+                  <td>{{$product->productDescription}}</td>
+                  <td>{{$product->quantityAvailable}}</td>
+                  <td>{{$product->unitPrice}}</td>
+                  <td><a href="{{ 'prod/'.$product->productID.'/edit' }}"><span class ="glyphicon glyphicon-edit"</span></td>
+                  <td>help</td>
+              </tr>
+              @endforeach
               </tbody>
             </table>
           </div>
@@ -386,7 +167,7 @@ $(document).ready(function(){
                   }
               }
     });
-    $('#tableFinishedProducts').dataTable( {
+$('#tableFinishedProducts').dataTable( {
         "pageLength": 10,
         "oLanguage": {
                  "oPaginate": {
@@ -394,7 +175,7 @@ $(document).ready(function(){
                 "sPrevious": "<i style='position: relative; top:2px;' class='fa fa-angle-left'></i>"
                   }
               }
-    });
+    });    
 });
 
 </script>
