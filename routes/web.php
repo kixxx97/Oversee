@@ -32,6 +32,7 @@ Route::post('/inventory/rawmats/create','oversee@rawMatsCreate');
 Route::post('/inventory/prod/create','oversee@prodCreate');
 Route::get('/rawmats/{id}/edit','oversee@editRawMat');
 Route::get('/prod/{id}/edit', 'oversee@editProduct');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
