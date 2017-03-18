@@ -33,6 +33,10 @@ Route::post('/inventory/prod/create','oversee@prodCreate');
 Route::get('/rawmats/{id}/edit','oversee@editRawMat');
 Route::get('/prod/{id}/edit', 'oversee@editProduct');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::post('/inventory/rawmats/update','oversee@rawMatsUpdate');
+Route::post('/inventory/prod/update'.'oversee@prodUpdate');
+Route::post('/inventory/rawmats/delete','oversee@rawMatsDelete');
+Route::post('/inventory/prod/delete','oversee@prodDelete');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
