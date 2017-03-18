@@ -7,9 +7,8 @@
     <link rel="stylesheet" type="text/css" href="assets/testCSS/style.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/testCSS/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/testCSS/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="assets/testCSS/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/testCSS/dataTables.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/testFonts/font-awesome/css/font-awesome.min.css">
     
     <!--SCRIPTS-->
