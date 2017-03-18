@@ -56,7 +56,8 @@ Route::get('/dashboard', function () {
 });
 
 Route::post('/shop/create','oversee@cart');
-
+Route::post('/inventory/rawmats/create','oversee@rawMatsCreate');
+Route::post('/inventory/prod/create','oversee@prodCreate');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
