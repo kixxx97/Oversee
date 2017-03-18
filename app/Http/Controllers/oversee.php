@@ -9,12 +9,16 @@ use App\Product;
 
 class oversee extends Controller
 {
-    
-    
-    public function shop()
+    public function __construct()
     {
-        return view('shop');
+        $this->middleware('auth');
+        if(\Auth::check() == null)
+        {
+            return redirect('login');
+        }
     }
+    
+
     public function custJobOrder()
     {
         return view('custJobOrder');

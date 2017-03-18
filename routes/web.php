@@ -15,8 +15,9 @@
 Route::get('/', function () {
     return view('index');
 });
-
-Route::get('/shop', 'oversee@shop');
+Route::get('/shop', 'ecommerce@shop');
+Route::group(['middleware' => ['web']], function () {
+    
 Route::get('/custjoborder','oversee@custJobOrder');
 Route::get('/employee','oversee@employee');
 Route::get('/inventory','oversee@inventory');
@@ -32,11 +33,10 @@ Route::post('/inventory/rawmats/create','oversee@rawMatsCreate');
 Route::post('/inventory/prod/create','oversee@prodCreate');
 Route::get('/rawmats/{id}/edit','oversee@editRawMat');
 Route::get('/prod/{id}/edit', 'oversee@editProduct');
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('/inventory/rawmats/update','oversee@rawMatsUpdate');
 Route::post('/inventory/prod/update'.'oversee@prodUpdate');
 Route::post('/inventory/rawmats/delete','oversee@rawMatsDelete');
 Route::post('/inventory/prod/delete','oversee@prodDelete');
 Auth::routes();
-
+});
 Route::get('/home', 'HomeController@index');
