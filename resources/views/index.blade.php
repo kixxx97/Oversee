@@ -6,7 +6,8 @@
 @include('includes.navbarLogin')
 <br><br>
 <center>
-<h1 class="company">Company Name</h1>
+    <img class="img-responsive" style="width: 400px;" src="assets/img/coca_cola_logo.png">
+    <br>
 <br><br><br>
 
 <div class="container">
@@ -21,41 +22,41 @@
 </div>
 
 <div class="container-fluid">
-	<img class="img-responsive" src="assets/img/banner.png">
-	<br>
+	<img class="img-responsive" src="assets/img/coca_cola_banner.png">
+	<br><br>
 	<div class="container">
-		<h3>Company Name Manufcaturing Company</h3>
+		<h3>The Coca-Cola Company</h3>
 		<br><br>
-		<p class="text-justify companytext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur.</p>
+		<p class="text-justify companytext">Coca-Cola is the most popular and biggest-selling soft drink in history, as well as one of the most recognizable brands in the world.
+
+Created in 1886 in Atlanta, Georgia, by Dr. John S. Pemberton, Coca-Cola was first offered as a fountain beverage at Jacob's Pharmacy by mixing Coca-Colasyrup with carbonated water.
+
+Coca-Cola was patented in 1887, registered as a trademark in 1893 and by 1895 it was being sold in every state and territory in the United States.
+
+In 1899, The Coca-Cola Company began franchised bottling operations in the United States and in 1906 bottling operations for Coca-Cola began to expand internationally.</p>
 	</div>
 
 	<div class="container">
 		<br><br><br>
 		<h3>Featured Items</h3>
-		<br>
+		<br><br><br>
 		
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Small Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_classic.png"><br><span class="itemName"><br>Coke Classic</span>
 		<br>Price: P99.75 per pc
 		</div>
 
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Medium Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_zero.png"><br><span class="itemName"><br>Coke Zero</span>
 		<br>Price: P99.75 per pc
 		</div>
 
-		<div class="col-md-4"><img src="assets/img/imgdummy.png"><br><span class="itemName"><br>Large Product</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/sprite-soda-can.jpg"><br><span class="itemName"><br>Sprite</span>
 		<br>Price: P99.75 per pc
 		</div>
 
 	</div>
 	
 
-	<br><br><br><hr>
+	<br><br><br><hr><br>
 
 	<div class="container">
 		<div class="col-md-4"><h4>Latest News</h4>
@@ -78,6 +79,8 @@
 			<button type="button" class="btn colorblue">Subscribe</button>
 		</div>
 	</div>
+        
+        <br><br><br>
 
 	<div class="container">
     <div class="row">
