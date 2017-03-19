@@ -17,10 +17,10 @@
     <div class="panel panel-default">
       <div class="panel-heading">
       	<p style="text-decoration: underline;">DETAILS</p>
-      	Job Order ID : $joborder->id <br>
-      	Type : $jobrder->type , $joborder->name <br>
-      	Products to be Made : $joborder->quantity <br>
-      	Deadline : $joborder->deliveryDateTime <br>
+      	Job Order ID : 200 <br>
+      	Type : Customer (Name) / Stock <br>
+      	Products to be Made : 1000 <br>
+      	Deadline : <br>
       </div>
       <div class="panel-body">
         <table id="table1" class="table-hover">
@@ -34,51 +34,46 @@
           </tr>
         </thead>
         <tbody>
-            @foreach($employees as $employee)
-            <tr>
-              <td>
-              <button type ="button" class="btn view" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
-              <button type ="button" class="btn check" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
-              </td>
-              <td>$employee->id</td>
-              <td>$employee->name</td>
-              <td>$employee->productionQuantity</td>
-              <td>$employee->accomplishedDateTime</td>
-            </tr>   
-          @endforeach
-        </tbody>
-      </table>
-      </div>
-    </div>
-    </div>
-  </div>
-
-  <div class="container-fluid employeecontent" id ="viewEmployeeProductivity" hidden>
-    <div class="container employeecontainer">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-      <button type="button" style="float:right;" onclick="closeDetails();">Close</button>
-      	<p style="text-decoration: underline;">EMPLOYEE'S DETAILS</p>
-      	Employee ID : $employee->id <br>
-      	Name of Employee: $employee->name <br>
-      </div>
-      <div class="panel-body">
-        <table id="table2" class="table-hover">
-        <thead>
-          <tr>      
-            <th>Check Number</th>
-            <th>Quantity Produced</th>
-            <th>Date</th>
+          <tr>
+            <td>
+            <button type ="button" class="btn" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
+            <button type ="button" class="btn" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
+            </td>
+            <td>001</td>
+            <td>Cherry Anne Retuya</td>
+            <td>400</td>
+            <td>January 17, 2017</td>
           </tr>
-        </thead>
-        <tbody>
-            @foreach ($productivities as $productivity)
-            <tr>
-              <td>$productivity->prodID</td>
-              <td>$productivity->quantity</td>
-              <td>$productivity->accomplishedDateTime</td>
-            </tr>
-          @endforeach
+          <tr>
+            <td>
+            <button type ="button" class="btn" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
+            <button type ="button" class="btn" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
+            </td>
+            <td>002</td>
+            <td>Kirster Kyle Quinio</td>
+            <td>300</td>
+            <td>January 17, 2017</td>
+          </tr> 
+          <tr>
+            <td>
+            <button type ="button" class="btn" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
+            <button type ="button" class="btn" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
+            </td>
+            <td>003</td>
+            <td>Franz Paran</td>
+            <td>100</td>
+            <td>January 17, 2017</td>
+          </tr> 
+          <tr>
+            <td>
+            <button type ="button" class="btn" onclick="viewProductivity();"><span class="glyphicon glyphicon-eye-open"></button>
+            <button type ="button" class="btn" onclick="checkEmployee();"><span class="glyphicon glyphicon-check"></button>
+            </td>
+            <td>004</td>
+            <td>Gil Canedo</td>
+            <td>100</td>
+            <td>January 17, 2017</td>
+          </tr>                      
         </tbody>
       </table>
       </div>

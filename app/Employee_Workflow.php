@@ -8,6 +8,9 @@ class Employee_Workflow extends Model
 {
     protected $table = 'employee_assigned_workflow';
     
+    protected $fillable = array('employeeID','workFlowID','status');
+    
+    
     public function employee()
     {
         return $this->belongsTo('App\Employee','employeeID');

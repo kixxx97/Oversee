@@ -26,15 +26,20 @@
           </tr>
         </thead>
         <tbody>
-            @foreach ($stockorders as $stockorder)
           <tr>
-            <td><button type ="button" class="btn view" value="{{ 'checkprod/'.$stockorder->id.'/viewjoborder'}}">View</button></td>
-            <td>{{$stockorder->id}}</td>
-            <td>{{$stockorder->type}}</td>
-            <td>{{$stockorder->percentage}}</td>
-            <td>{{$stockorder->updateDate}}</td>
+            <td><button type ="button" class="btn" onclick="viewJobOrder();">View</button></td>
+            <td>200</td>
+            <td>Stock</td>
+            <td>50%</td>
+            <td>January 17, 2017</td>
           </tr>
-          @endforeach
+          <tr>
+            <td><button type ="button" class="btn" onclick="viewJobOrder();">View</button></td>
+            <td>200</td>
+            <td>Stock</td>
+            <td>50%</td>
+            <td>January 17, 2017</td>
+          </tr>   
         </tbody>
       </table>
       </div>

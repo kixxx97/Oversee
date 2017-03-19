@@ -16,21 +16,35 @@
           <tr>          
             <th>View</th>
             <th>Purchase ID</th>
-            <th>Requested By</th>
-            <th>Received By</th>
+            <th>Purchase Order Name</th>
             <th>Status</th>
           </tr>
         </thead>
         <tbody>
-          @foreach ($purchases as $purchase)
           <tr>
-            <td><button type ="button" class="btn view" val="{{ 'purchase/'.$purchase->id.'/viewPurchase' }}">View</button></td>
-            <td>$purchase->id</td>
-            <td>$purchase->reqBy</td>
-            <td>$purchase->recBy</td>
-            <td>$purchase->status</td>
+          <td><a href="#"><button type ="button" class="btn">View</button></a></td>
+            <td>001</td>
+            <td>BOTTLE</td>
+            <td>OK</td>
           </tr>
-          @endforeach
+           <tr>
+           <td><a href="#"><button type ="button" class="btn">View</button></a></td>
+            <td>002</td>
+            <td>BOTTLE</td>
+            <td>OK</td>
+          </tr>
+           <tr>
+           <td><a href="#"><button type ="button" class="btn">View</button></a></td>
+            <td>003</td>
+            <td>BOTTLE</td>
+            <td>OK</td>
+          </tr>
+            <tr>
+            <td><a href="#"><button type ="button" class="btn">View</button></a></td>
+            <td>004</td>
+            <td>BOTTLE</td>
+            <td>OK</td>
+          </tr>          
         </tbody>
       </table>
       </div>
@@ -40,7 +54,6 @@
 
   </div>
 </div>
-
 <!-- Modal -->
 <div id="addPurchaseModal" class="modal fade" role="dialog">
   <div class="modal-dialog">

@@ -11,7 +11,7 @@
 
 @include('includes.sidebarCheckProd')
 
-  <div class="container-fluid employeecontent">
+   <div class="container-fluid employeecontent">
     <div class="container employeecontainer">
     <div class="panel panel-default">
       <div class="panel-body">
@@ -26,15 +26,20 @@
           </tr>
         </thead>
         <tbody>
-            @foreach (customerorders as $customerorder)
           <tr>
-            <td><button type ="button" class="btn view" value="{{ 'checkprod/'.$checkprod->id.'/viewjoborder'}}">View</button></td>
-            <td>{{$customerorder->id}}</td>
-            <td>{{$customerorder->type}}</td>
-            <td>{{$customerorder->percentage}}</td>
-            <td>{{$customerorder->updateDate}}</td>
+            <td><button type ="button" class="btn" onclick="viewJobOrder();">View</button></td>
+            <td>200</td>
+            <td>Customer</td>
+            <td>50%</td>
+            <td>January 17, 2017</td>
           </tr>
-            @endforeach
+          <tr>
+            <td><button type ="button" class="btn" onclick="viewJobOrder();">View</button></td>
+            <td>200</td>
+            <td>Customer</td>
+            <td>50%</td>
+            <td>January 17, 2017</td>
+          </tr> 
         </tbody>
       </table>
       </div>

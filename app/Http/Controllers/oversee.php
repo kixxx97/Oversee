@@ -10,6 +10,8 @@ use App\Job_Order_details;
 use App\User;
 use App\Employee;
 use Illuminate\Support\Facades\Hash;
+use App\Workflow;
+use App\Employee_Workflow;
 
 class oversee extends Controller
 {
@@ -76,8 +78,9 @@ class oversee extends Controller
     }
     public function jobOrder()
     {
+        $jobOrders = Job_Order::where('status','Ongoing')->get();
         $products = Product::where('status','active')->get();
-        return view('joborder', compact('products'));
+        return view('joborder', compact('products','jobOrders'));
     }
     public function purchase()
     {
@@ -137,10 +140,17 @@ class oversee extends Controller
     
     public function editProduct($id)
     {
-        $product = Product::where('productID',$id)->firstOrFail();
-        
-        
-        return view('editProduct',compact('product'));
+       $product = Product::where('productID',$id)->firstOrFail();
+        $rawMats = Raw_Materials::where('status','active')->get();
+        $employees = Employee::where('status','active')->get();
+        $workflows = Workflow::where('productID',$id)->get();
+        $assigned = array();
+        foreach($workflows as $workflow)
+        {
+            $assigned[] = Employee_Workflow::where('workFlowID',$workflow->workFlowID)->get();
+        }
+//        dd($assigned);
+        return view('editProduct',compact('product','rawMats','employees','workflows','assigned'));
     }
     
         public function jobOrderCreate(Request $request)
@@ -176,5 +186,46 @@ class oversee extends Controller
             ]);
             }
         }
+    }
+    public function checkProd()
+    {
+        return view('viewjoborder');
+    }
+    
+    public function workflowCreate(Request $request)
+    {
+//        dd($request);
+       $resp = Workflow::create([
+       'productID' => $request->input('prodID'),
+       'workFlowTitle' => $request->input('title'),
+       'workFlowDescription' => $request->input('description'),
+       'stepNumber' => $request->input('stepnumber'),
+       'manHours' => $request->input('manhours'),
+       'rawMaterialsID' => $request->input('rawMats'),
+       'rawMatsQty' => $request->input('rawMatQty'),
+       'payRate' => $request->input('payrate'),
+       'prequisiteWorkFlowID' => $request->input('pre-prequisite'),
+       'status' => 'active'
+       ]);
+       
+       return redirect('/prod/'.$request->input('prodID').'/edit');
+    }
+    
+    public function getEmployees()
+    {
+        $employees = Employee::where('status','active')->where('role','worker')->get();
+        
+        return response ()->json ($employees);
+    }
+    
+    public function assign(Request $request)
+    {
+//        dd($request);
+        $resp = Employee_Workflow::create([
+        'employeeID' => $request->input('agent_id'),
+        'workFlowID' => $request->input('workFlowID'),
+        'status' => 'active'
+        ]);
+        return redirect('/prod/'.$request->input('prodID').'/edit');
     }
 }

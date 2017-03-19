@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/shop', 'ecommerce@shop');
 Route::group(['middleware' => ['web']], function () {
     
+Route::get('/checkprod','oversee@checkProd');
 Route::get('/custjoborder','oversee@custJobOrder');
 Route::get('/employee','oversee@employee');
 Route::post('/employee','oversee@storeEmployee');
@@ -34,11 +35,15 @@ Route::post('/inventory/rawmats/create','oversee@rawMatsCreate');
 Route::post('/inventory/prod/create','oversee@prodCreate');
 Route::get('/rawmats/{id}/edit','oversee@editRawMat');
 Route::get('/prod/{id}/edit', 'oversee@editProduct');
+
+Route::post('/inventory/prod/update','oversee@prodUpdate');
+Route::post('/inventory/workflow/add','oversee@workflowCreate');
 Route::post('/inventory/rawmats/update','oversee@rawMatsUpdate');
-Route::post('/inventory/prod/update'.'oversee@prodUpdate');
 Route::post('/inventory/rawmats/delete','oversee@rawMatsDelete');
 Route::post('/inventory/prod/delete','oversee@prodDelete');
 Route::post('/joborder/create', 'oversee@jobOrderCreate');
+Route::post('/getEmployees', 'oversee@getEmployees');
+Route::post('/inventory/workflow/assign/','oversee@assign');
 Auth::routes();
 });
 Route::get('/home', 'HomeController@index');

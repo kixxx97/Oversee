@@ -9,6 +9,7 @@
 @include('includes.sidebar')
 
   </div>
+<meta name ="csrf-token" content = "{{csrf_token() }}"/>
     
   <div class="container-fluid editproductcontent">
         <div class="container-fluid">
@@ -18,22 +19,20 @@
                 <div class="wizard">
 
                         <ul class="nav nav-wizard">
-
+                            <?php $ctr = 0; ?>
+                            @foreach($workflows as $workflow)
+                            @if($ctr == 0)
                             <li class="active">
-                                <a href="#step1" data-toggle="tab">Procedure 1</a>
+                            <?php $ctr++; ?>
+                                <a href="#{{$workflow->workFlowID}}" data-toggle="tab">Procedure {{ $workflow->stepNumber }}</a>
                             </li>
-
-                            <li class="disabled">
-                                <a href="#step2" data-toggle="tab">Procedure 2</a>
+                            @else
+                            <li class="enabled">
+                            <?php $ctr++ ?>
+                                <a href="#{{$workflow->workFlowID}}" data-toggle="tab">Procedure {{ $workflow->stepNumber }}</a>
                             </li>
-
-                            <li class="disabled">
-                                <a href="#step3" data-toggle="tab">Procedure 3</a>
-                            </li>
-
-                            <li class="disabled">
-                                <a href="#step4" data-toggle="tab">Procedure 4</a>
-                            </li>
+                            @endif
+                            @endforeach
                             <li class="addworkflowLink">
                                 <a data-toggle="modal" href="#addworkflowmodal"><span> + Add Workflow</span></a>
                             </li>
@@ -42,79 +41,96 @@
 
                     <form>
                         <div class="tab-content">
-                            <div class="tab-pane active" id="step1">
-                                <h3>Procedure 1</h3>
+                            <?php $ctr = 0; ?>
+                            @foreach($workflows as $workflow)
+                            @if($ctr == 0)
+                            <?php $ctr++; ?>
+                            <div class="tab-pane active" id="{{$workflow->workFlowID}}">
+                                <h3>{{$workflow->workFlowTitle}}</h3>
                                 <p class="step-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    <label>
+                                        Description:
+                                    </label>
+                                    {{$workflow->workFlowDescription}} <br>
+                                    <label>
+                                        Raw Material:
+                                    </label>
+                                    {{$workflow->rawMaterials->rawMaterialName}} <br>
+                                    <label>
+                                        Quantity of Raw Material:
+                                    </label>
+                                    {{$workflow->rawMatsQty}}<br>
+                                    <label>
+                                        Manhours Required:
+                                    </label>
+                                    {{$workflow->manHours}}<br>
+                                    <label>
+                                        Rate per piece:
+                                    </label>
+                                    {{$workflow->payRate}}<br>
+                                    <label>
+                                        Employee Assigned:
+                                    </label><br>
+                                    @foreach($assigned as $assigned_employee)
+                                        @foreach($assigned_employee as $item)
+                                            @if($item->workFlowID == $workflow->workFlowID)
+                                                {{$item->employee->firstName.' '.$item->employee->lastName}}
+                                                <br>
+                                            @endif
+                                        @endforeach
+                                    @endforeach
+                              
                                 </p>
                                 <br>
                                 <ul class="list-inline pull-left">
                                     <li><h5>Actions:</h5></li>
-                                    <li><a data-toggle="modal" href="#editworkflowmodal"><button class="btn btn-primary">Edit</button></a> <a href="#"><button class="btn btn-danger">Delete</button></a></li>
+                                   <li><button class ="btn btn-success assignEmp" name = "assignEmp" data-id="{{$workflow->workFlowID}}">Assign</button>
+                                       <button class="btn btn-primary editWorkflow" name = "editWorkflow" data-id="{{$workflow->workFlowID}}">Edit</button>
+                                       <button class="btn btn-danger deleteWorflow" name = "deleteWorflow" data-id="{{$workflow->workFlowID}}">Delete</button></li>
                                 </ul>
                                 <ul class="list-inline pull-right">
                                     <li><button type="button" class="btn btn-primary continueBtn">Continue</button></li>
                                 </ul>
                             </div>
-                            <div class="tab-pane" id="step2">
-                                <h3>Procedure 2</h3>
+                            @else
+                            <div class="tab-pane" id="{{$workflow->workFlowID}}">
+                                <h3>{{$workflow->workFlowTitle}}</h3>
                                 <p class="step-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    <label>
+                                        Description:
+                                    </label>
+                                    {{$workflow->workFlowDescription}} <br>
+                                    <label>
+                                        Raw Material:
+                                    </label>
+                                    {{$workflow->rawMaterials->rawMaterialName}} <br>
+                                    <label>
+                                        Quantity of Raw Material:
+                                    </label>
+                                    {{$workflow->rawMatsQty}}<br>
+                                    <label>
+                                        Manhours Required:
+                                    </label>
+                                    {{$workflow->manHours}}<br>
+                                    <label>
+                                        Rate per piece:
+                                    </label>
+                                    {{$workflow->payRate}}<br>
+                                    
                                 </p>
                                 <br>
                                 <ul class="list-inline pull-left">
                                     <li><h5>Actions:</h5></li>
-                                    <li><a data-toggle="modal" href="#editworkflowmodal"><button class="btn btn-primary">Edit</button></a> <a href="#"><button class="btn btn-danger">Delete</button></a></li>
+                                   <li><button class ="btn btn-success assignEmp" name = "assignEmp" data-id="{{$workflow->workFlowID}}">Assign</button>
+                                       <button class="btn btn-primary editWorkflow" name = "editWorkflow" data-id="{{$workflow->workFlowID}}">Edit</button>
+                                       <button class="btn btn-danger deleteWorflow" name = "deleteWorflow" data-id="{{$workflow->workFlowID}}">Delete</button></li>
                                 </ul>
                                 <ul class="list-inline pull-right">
                                    <li><button type="button" class="btn btn-primary continueBtn">Continue</button></li>
                                 </ul>
                             </div>
-                            <div class="tab-pane" id="step3">
-                                <h3>Procedure 3</h3>
-                                <p class="step-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                                <br>
-                                <ul class="list-inline pull-left">
-                                    <li><h5>Actions:</h5></li>
-                                    <li><a data-toggle="modal" href="#editworkflowmodal"><button class="btn btn-primary">Edit</button></a> <a href="#"><button class="btn btn-danger">Delete</button></a></li>
-                                </ul>
-                                <ul class="list-inline pull-right">
-                                    <li><button type="button" class="btn btn-primary continueBtn">Continue</button></li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane" id="step4">
-                                <h3>Procedure 4</h3>
-                                <p class="step-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                                <br>
-                                <ul class="list-inline pull-left">
-                                    <li><h5>Actions:</h5></li>
-                                    <li><a data-toggle="modal" href="#editworkflowmodal"><button class="btn btn-primary">Edit</button></a> <a href="#"><button class="btn btn-danger">Delete</button></a></li>
-                                </ul>
-                            </div>
+                            @endif
+                            @endforeach
                             <div class="clearfix"></div>
                         </div>
                     </form>
@@ -129,7 +145,9 @@
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
-          <form>
+         <form action = "{{ url('inventory/workflow/add') }}" method = "POST">
+        {{csrf_field()}}
+        <input type= ="text" class ="hidden" value ="{{$product->productID}}" name ="prodID">
               <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                   <h4 class="modal-title">Add Workflow</h4>
@@ -153,11 +171,25 @@
                   <div class="col-md-6">
                     <div class ="form-group">
                        Pre-requisite:<br>
-                       <input type ="text" name ="pre-prequisite" class ="form-control">
+                       <select class ='form-control' name = 'pre-prequisite'>
+                       @foreach($workflows as $workflow)
+                       
+                       <option value ="{{$workflow->workFlowID}}">{{$workflow->workFlowTitle}}</option>
+                       @endforeach
+                       </select>
                     </div>
                     <div class ="form-group">
                        Raw Material Requirement:<br>
-                       <input type ="text" name ="rawmatreq" class ="form-control">
+                       <select class ='form-control' name = 'rawMats'>
+                       @foreach($rawMats as $rawMat)
+                       
+                       <option value ="{{$rawMat->rawMaterialsID}}">{{$rawMat->rawMaterialName}}</option>
+                       @endforeach
+                       </select>
+                    </div>
+                    <div class ="form-group">
+                       Raw Material Quantity:<br>
+                       <input type ="text" name ="rawMatQty" class ="form-control">
                     </div>
                     <div class ="form-group">
                        Man Hours:<br>
@@ -205,6 +237,37 @@
       </div>
     </div>                    
     </div>
+  
+  
+<form action = "{{ url('inventory/workflow/assign') }}" method = "POST">
+ {{csrf_field()}}
+  <div class="modal fade" id="assignEmp" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Assign Employee</h4>
+        </div>
+        <div class="modal-body">
+          <div class="wrapper newEmployeeModal">
+                      <input type= ="text" class ="hidden" value ="{{$product->productID}}" name ="prodID">
+            <label for="numProds">Employee:</label>
+            <select class = "form-control" name="agent_id" id = "agentName">
+
+            </select>
+            <br>
+          </div>
+        </div>
+        <div class="modal-footer">     
+          <button type="submit" class="btn btn-primary btn submit">Submit</button>
+          <button type="button" class="btn btn-danger btnclose" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
     
     
     
@@ -236,5 +299,35 @@
 function nextTab(elem) {
     $(elem).next().find('a[data-toggle="tab"]').click();
 }
+
+ $('.assignEmp').on('click', function(e)
+ {
+    e.preventDefault();
+    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+    $id = $(this).data("id");
+    $("#assignEmp").append('<input type = "text" class ="hidden" name = "workFlowID" value = "'+$id+'">');
+    $.ajax({
+        method: "post",
+        url: "../../getEmployees",
+        data: {'_token': CSRF_TOKEN
+               },
+        success: function(employee) {
+          console.log(employee);
+          var employees = employee;
+          $("#agentName").empty();
+          $.each(employee,function(key,value)
+          {
+             $("#agentName").append('<option value = "'+value.employeeID+'">'+value.firstName + ' ' + value.lastName+'</option>'); 
+          });
+        },
+        error: function() {
+
+            alert('An error occured.');
+        }
+    });
+    
+     $("#assignEmp").modal('show');
+     
+ });
 </script>
 @endsection

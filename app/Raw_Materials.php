@@ -8,11 +8,14 @@ class Raw_Materials extends Model
 {
     protected $table = 'raw_materials';
     
+    protected $primaryKey = 'rawMaterialsID';
+    
+    
     protected $guarded = ['rawMaterialsID'];
     
     public function workflowDetails()
     {
-        return $this->hasMany('App\Workflow_Details','rawMaterialsID');
+        return $this->hasMany('App\Workflow','rawMaterialsID');
     }
     
     public function stockDetails()

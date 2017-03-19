@@ -15,22 +15,50 @@
         <table id="table1" class="table-hover">
         <thead>
           <tr>
+            <th></th>          
             <th>Supplier ID</th>
             <th>Supplier Name</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
-            <tbody>
-            @foreach ($suppliers as $supplier)
-              <tr>
-                <td>{{ $supplier->id }}</td>
-                <td>{{ $supplier->name }}</td>
-                <td><button type="button" class="edit" value="{{'supplier/'.$supplier->id.'/updateSupplier'}}">Edit</button></td>
-                <td><button type="button" class="delete" value="{{'supplier/'.$supplier->id.'/deleteSupplier'}}">Delete</button></td>
-              </tr>   
-            @endforeach
-            </tbody>
+        <tbody>
+          <tr>
+            <td><button type ="button" class="btn">View</button></td>
+            <td>001</td>
+            <td>CHINA WAX</td>
+            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+          </tr>
+          <tr>
+            <td><button type ="button" class="btn">View</button></td>
+            <td>002</td>
+            <td>CHINA WAX</td>
+            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+          </tr>
+          <tr>
+            <td><button type ="button" class="btn">View</button></td>
+            <td>003</td>
+            <td>CHINA WAX</td>
+            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+          </tr>
+          <tr>
+            <td><button type ="button" class="btn">View</button></td>
+            <td>004</td>
+            <td>CHINA WAX</td>
+            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+          </tr>
+           <tr>
+            <td><button type ="button" class="btn">View</button></td>
+            <td>005</td>
+            <td>CHINA WAX</td>
+            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+          </tr>     
+        </tbody>
       </table>
       </div>
     </div>

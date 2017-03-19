@@ -11,6 +11,10 @@ class Employee extends Model
     protected $fillable = [
         'employeeID','firstName','lastName','middleInitial','gender','birthdate','hiredate','status','userID','contactNumber','role'
     ];
+    
+    protected $primaryKey = 'employeeID';
+    
+    
     public function jobOrder()
     {
         return $this->hasMany('App\Job_Order','employeeID');
