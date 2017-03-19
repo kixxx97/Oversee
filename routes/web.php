@@ -20,6 +20,7 @@ Route::group(['middleware' => ['web']], function () {
     
 Route::get('/custjoborder','oversee@custJobOrder');
 Route::get('/employee','oversee@employee');
+Route::post('/employee','oversee@storeEmployee');
 Route::get('/inventory','oversee@inventory');
 Route::get('/joborder','oversee@jobOrder');
 Route::get('/purchase','oversee@purchase');

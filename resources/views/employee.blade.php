@@ -193,6 +193,8 @@
     
       <!-- Modal content-->
       <div class="modal-content">
+        <form action="" method="post">
+            {{ csrf_field() }}
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Create New Employee</h4>
@@ -200,22 +202,22 @@
         <div class="modal-body">
           <div class="wrapper newEmployeeModal">
             <label for="employeeID">Employee ID</label>
-            <input id="employeeID" type="text" class="form-control">
+            <input id="employeeID" type="text" name="empId" required="required" class="form-control">
             
             <label for="fname">First Name</label>
-            <input id="fname" type="text" class="form-control">
+            <input id="fname" type="text" name="firstName" required="required" class="form-control">
             
             <label for="lname">Last Name</label>
-            <input id="lname" type="text" class="form-control">
+            <input id="lname" type="text" name="lastName" required="required" class="form-control">
             
             <label for="cntactNum">Contact Number</label>
-            <input id="cntactNum" type="text" class="form-control">
+            <input id="cntactNum" type="text" name="contactNum" required="required" class="form-control">
             
             <label for="email">Email Address</label>
-            <input id="email" type="text" class="form-control">
+            <input id="email" type="email" name="email" required="required" class="form-control">
             
             <label for="assignWork">Assigned Work</label>
-            <input id="assignWork" type="text" class="form-control">
+            <input id="assignWork" type="text" name="assignedWork" required="required" class="form-control">
             <br>
           </div>
         </div>
@@ -223,6 +225,7 @@
           <button type="button" class="btn btn-danger btnclose" data-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-primary btnsubmit">Submit</button>
         </div>
+        </form>
       </div>
       
     </div>

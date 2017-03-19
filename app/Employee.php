@@ -8,6 +8,9 @@ class Employee extends Model
 {
     protected $table = 'employee';
     
+    protected $fillable = [
+        'employeeID','firstName','lastName','middleInitial','gender','birthdate','hiredate','status','userID'
+    ];
     public function jobOrder()
     {
         return $this->hasMany('App\Job_Order','employeeID');

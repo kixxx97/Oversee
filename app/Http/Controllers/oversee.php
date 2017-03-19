@@ -27,6 +27,37 @@ class oversee extends Controller
     {
         return view('employee');
     }
+    public function storeEmployee(Request $request)
+    {
+        $empId = $request->input('empId');
+        $firstName = $request->input('firstName');
+        $lastName = $request->input('lastName');
+        $contactNum = $request->input('contactNum');
+        $email = $request->input('email');
+        $assignedWork = $request->input('assignedWork');
+        
+        $userId = User::create
+        ([
+            "username" => $firstName[0].$lastName,
+            "email" => $email,
+            "password" => Hash::make($firstName[0].$lastName),
+        ])->id;
+        
+        Employee::create
+        ([
+            "employeeID" => $empId,
+            "firstName" => $firstName,
+            "lastName" => $lastName,
+            "middleInitial" => "",
+            "gender" => "",
+            "birthdate" => \Carbon\Carbon::now(),
+            "hiredate" => \Carbon\Carbon::now(),
+            "status" => "",
+            "userID" => $userId
+        ]);
+        
+        return view('employee');
+    }
     public function inventory()
     {
         $rawMats = Raw_Materials::where('status','active')->get();
