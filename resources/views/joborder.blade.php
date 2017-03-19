@@ -12,8 +12,8 @@
   <div class="container-fluid jobordercontent">
   <br><br>
     <ul class="nav nav-pills">
-      <li class="active"><a data-toggle="pill" href="#create">Create</a></li>
-      <li><a data-toggle="pill" href="#view">View</a></li>
+      <li class="active"><a id="createpill" data-toggle="pill" href="#create">Create</a></li>
+      <li><a id="viewpill" data-toggle="pill" href="#view">View</a></li>
     </ul>
     
     <div class="tab-content">
@@ -23,7 +23,7 @@
               <form method ="post" action ="{{url('/joborder/create')}}">
               {{ csrf_field() }}
               <div class="row">
-              {{ $ctr = 0 }}
+              <?php $ctr = 0; ?>
               @foreach($products as $product)
               @if($ctr % 4 == 0)
               <div class="row">
@@ -35,7 +35,7 @@
                       <br><br>
                           <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/{{$ctr}}.png"></center>
                           <br>
-                          <h4>Coca-Cola Classic</h4>
+                          <h4>{{$product->productName}}</h4>
                           <span>Quantity:</span>
                           <input type ="hidden" value ="{{$product->productID}}" name ="product[{{$ctr}}][id]"/>
                           <input type="text" value ="0" name ="product[{{$ctr}}][qty]">
@@ -50,7 +50,7 @@
                   
                                    
               <br><br>
-              <center><input type ="submit" value = "Start Job Order" </center>
+              <center><input type ="submit" value = "Start Job Order"></center>
               </form>
               <div class="row"><br><br></div>
           </div>
@@ -81,6 +81,8 @@
       
     </div>
   </div>
+
+      </div>
 
       </div>
       <div id="view" class="tab-pane fade">
@@ -589,6 +591,32 @@ function showstep3all() {
 function showstep4all() {
   $('#allstep4').removeClass('hidden');
 }
+
+//function hidetab1(){
+//        $('.pill').collapse();
+//        $('#view').addClass('hidden');
+//        $('#create').removeClass('hidden');
+//        $('#create').removeClass('in active');
+//        $('#view').addClass(' in active');
+//}
+//
+//function hidetab2(){
+//        $('.pill').collapse();
+//        $('#view').removeClass('hidden');
+//        $('#create').addClass('hidden');
+//        $('#create').removeClass(' in active');
+//        $('#view').addClass(' in active');
+//}
+
+$( "#viewpill" ).click(function() {
+  $( "#view" ).removeClass('hidden');
+  $( "#create" ).addClass('hidden');
+});
+
+$( "#createpill" ).click(function() {
+  $( "#create" ).removeClass('hidden');
+  $( "#view" ).addClass('hidden');
+});
 
 </script>
 
