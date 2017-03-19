@@ -285,8 +285,21 @@ body{
 }
 
 .glyphicon-edit{
-  background: #1774d1;
-  padding: 8px;
+    background: #1774d1;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    padding-left: 2px;
+    padding-right: 1px;
+    font-size: 15px;
+}
+
+.editBtnProd{
+    background: #1774d1;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 4px;
 }
 
 .glyphicon-trash{

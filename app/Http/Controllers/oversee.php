@@ -92,4 +92,12 @@ class oversee extends Controller
         
         return redirect('inventory');
     }
+    
+    public function editProduct($id)
+    {
+        $product = Product::where('productID',$id)->firstOrFail();
+        
+        
+        return view('editProduct',compact('product'));
+    }
 }
