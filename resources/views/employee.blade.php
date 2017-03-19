@@ -34,7 +34,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -44,7 +44,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -54,7 +54,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -64,7 +64,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -74,7 +74,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -84,7 +84,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -94,7 +94,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -104,7 +104,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -114,7 +114,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -124,7 +124,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -134,7 +134,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -144,7 +144,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#">><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -154,7 +154,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
           </tr>
           <tr>
@@ -164,7 +164,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></td>
           </tr>
           <tr>
@@ -174,7 +174,7 @@
             <td>09336310984</td>
             <td>john@example.com</td>
             <td>Limpyo Balay</td>
-            <td><a href="#"><span class="glyphicon glyphicon-edit"></span></td>
+            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></td>
           </tr>
         </tbody>
@@ -187,7 +187,7 @@
 
   </div>
 
-   <!-- Modal -->
+   <!-- Add Employee Modal -->
   <div class="modal fade" id="newEmpModal" role="dialog">
     <div class="modal-dialog">
     
@@ -201,29 +201,137 @@
         </div>
         <div class="modal-body">
           <div class="wrapper newEmployeeModal">
-            <label for="employeeID">Employee ID</label>
-            <input id="employeeID" type="text" name="empId" required="required" class="form-control">
-            
-            <label for="fname">First Name</label>
-            <input id="fname" type="text" name="firstName" required="required" class="form-control">
-            
-            <label for="lname">Last Name</label>
-            <input id="lname" type="text" name="lastName" required="required" class="form-control">
-            
-            <label for="cntactNum">Contact Number</label>
-            <input id="cntactNum" type="text" name="contactNum" required="required" class="form-control">
-            
-            <label for="email">Email Address</label>
-            <input id="email" type="email" name="email" required="required" class="form-control">
-            
-            <label for="assignWork">Assigned Work</label>
-            <input id="assignWork" type="text" name="assignedWork" required="required" class="form-control">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="employeeID">Employee ID</label>
+                  <input id="employeeID" type="text" name="empId" required="required" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label for="assignWork">Assigned Work</label>
+                  <input id="assignWork" type="text" name="assignedWork" required="required" class="form-control">
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="fname">First Name</label>
+                  <input id="fname" type="text" name="firstName" required="required" class="form-control">
+                </div>
+                <div class="col-md-4">
+                  <label for="midinitial">Middle Initial</label>
+                  <input id="midinitial" type="text" name="middleinitial" required="required" class="form-control">
+                </div>
+                <div class="col-md-4">
+                  <label for="lname">Last Name</label>
+                  <input id="lname" type="text" name="lastName" required="required" class="form-control">
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="gender">Gender</label>
+                  <br>
+                  <label class="radio-inline"><input type="radio" name="optradio">Male</label>
+                  <label class="radio-inline"><input type="radio" name="optradio">Female</label>
+                </div>
+                <div class="col-md-8">
+                  <label for="birthdate">Birthdate</label>
+                  <input id="birthdate" type="date" name="birthDate" required="required" class="form-control">
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                    <label for="cntactNum">Contact Number</label>
+                    <input id="cntactNum" type="text" name="contactNum" required="required" class="form-control">
+                </div>
+                <div class="col-md-8">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" name="email" required="required" class="form-control">
+                </div>
+              </div>            
             <br>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger btnclose" data-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-primary btnsubmit">Submit</button>
+          <button type="button" class="btn btn-danger btnclose" data-dismiss="modal">Cancel</button>          
+        </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+   
+   <!-- Modal -->
+  <div class="modal fade" id="editEmpModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <form action="" method="post">
+            {{ csrf_field() }}
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Employee</h4>
+        </div>
+        <div class="modal-body">
+          <div class="wrapper newEmployeeModal">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="employeeID">Employee ID</label>
+                  <input id="employeeID" type="text" name="empId" required="required" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label for="assignWork">Assigned Work</label>
+                  <input id="assignWork" type="text" name="assignedWork" required="required" class="form-control">
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="fname">First Name</label>
+                  <input id="fname" type="text" name="firstName" required="required" class="form-control">
+                </div>
+                <div class="col-md-4">
+                  <label for="midinitial">Middle Initial</label>
+                  <input id="midinitial" type="text" name="middleinitial" required="required" class="form-control">
+                </div>
+                <div class="col-md-4">
+                  <label for="lname">Last Name</label>
+                  <input id="lname" type="text" name="lastName" required="required" class="form-control">
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="gender">Gender</label>
+                  <br>
+                  <label class="radio-inline"><input type="radio" name="optradio">Male</label>
+                  <label class="radio-inline"><input type="radio" name="optradio">Female</label>
+                </div>
+                <div class="col-md-8">
+                  <label for="birthdate">Birthdate</label>
+                  <input id="birthdate" type="date" name="birthDate" required="required" class="form-control">
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                    <label for="cntactNum">Contact Number</label>
+                    <input id="cntactNum" type="text" name="contactNum" required="required" class="form-control">
+                </div>
+                <div class="col-md-8">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" name="email" required="required" class="form-control">
+                </div>
+              </div>            
+            <br>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btnsubmit">Update</button>
+          <button type="button" class="btn btn-danger btnclose" data-dismiss="modal">Cancel</button>          
         </div>
         </form>
       </div>
