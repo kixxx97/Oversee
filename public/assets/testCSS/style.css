@@ -375,3 +375,177 @@ body{
     width: 200px !important;
     border: 0 !important;
 }
+
+.wizard{
+    border: 1px solid #ababab;
+}
+
+.wizard .tab-content{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+ul.nav-wizard {
+  background-color: #f1f1f1;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 0px;
+  position: relative;
+  overflow: hidden;
+}
+ul.nav-wizard:before {
+  position: absolute;
+}
+ul.nav-wizard:after {
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 138px;
+  height: 47px;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+  z-index: 11;
+  content: " ";
+}
+ul.nav-wizard li {
+  position: relative;
+  float: left;
+  height: 46px;
+  display: inline-block;
+  text-align: center;
+  padding: 0 20px 0 30px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 46px;
+}
+ul.nav-wizard li a {
+  color: #428bca;
+  padding: 0;
+}
+ul.nav-wizard li a:hover {
+  background-color: transparent;
+}
+ul.nav-wizard li:before {
+  position: absolute;
+  display: block;
+  border: 24px solid transparent;
+  border-left: 16px solid #d4d4d4;
+  border-right: 0;
+  top: -1px;
+  z-index: 10;
+  content: '';
+  right: -16px;
+}
+ul.nav-wizard li:after {
+  position: absolute;
+  display: block;
+  border: 24px solid transparent;
+  border-left: 16px solid #f1f1f1;
+  border-right: 0;
+  top: -1px;
+  z-index: 10;
+  content: '';
+  right: -15px;
+}
+ul.nav-wizard li.active {
+  color: #fff;
+  background: #1774D1;
+}
+ul.nav-wizard li.active:after {
+  border-left: 16px solid #1774D1;
+}
+ul.nav-wizard li.active a,
+ul.nav-wizard li.active a:active,
+ul.nav-wizard li.active a:visited,
+ul.nav-wizard li.active a:focus {
+  color: #fff;
+  background: #1774D1;
+}
+ul.nav-wizard .active ~ li {
+  color: #999999;
+  background: #f9f9f9;
+}
+ul.nav-wizard .active ~ li:after {
+  border-left: 16px solid #f9f9f9;
+}
+ul.nav-wizard .active ~ li a,
+ul.nav-wizard .active ~ li a:active,
+ul.nav-wizard .active ~ li a:visited,
+ul.nav-wizard .active ~ li a:focus {
+  color: #999999;
+  background: #f9f9f9;
+}
+ul.nav-wizard.nav-wizard-backnav li:hover {
+  color: #468847;
+  background: #f6fbfd;
+}
+ul.nav-wizard.nav-wizard-backnav li:hover:after {
+  border-left: 16px solid #f6fbfd;
+}
+ul.nav-wizard.nav-wizard-backnav li:hover a,
+ul.nav-wizard.nav-wizard-backnav li:hover a:active,
+ul.nav-wizard.nav-wizard-backnav li:hover a:visited,
+ul.nav-wizard.nav-wizard-backnav li:hover a:focus {
+  color: #468847;
+  background: #f6fbfd;
+}
+ul.nav-wizard.nav-wizard-backnav .active ~ li {
+  color: #999999;
+  background: #ededed;
+}
+ul.nav-wizard.nav-wizard-backnav .active ~ li:after {
+  border-left: 16px solid #ededed;
+}
+ul.nav-wizard.nav-wizard-backnav .active ~ li a,
+ul.nav-wizard.nav-wizard-backnav .active ~ li a:active,
+ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited,
+ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
+  color: #999999;
+  background: #ededed;
+}
+
+.editproductcontent{
+    background: #fff;
+    width: 80%;
+    position: relative;
+    left: 25px;
+    padding-bottom: 10px;
+}
+
+.addworkflowLink a{
+    color: #fff !important;
+    background: #1774D1 !important;
+}
+
+.addworkflowLink:before{
+    border: 24px solid transparent;
+    border-left: 16px solid #1774D1 !important;
+}
+
+.addworkflowLink {
+  background: #1774D1 !important;
+}
+
+.addworkflowLink:after{
+    border-left: 16px solid #1774D1 !important;
+}
+
+.tab-content button{
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: calibri;
+    text-transform: uppercase;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+.tab-content h5{
+    text-transform: uppercase;
+    font-weight: 600;
+}

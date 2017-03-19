@@ -14,7 +14,7 @@
         <li class="active"><a href="javascript:hideTable1();">Raw Materials</a></li>
         <li><a href="javascript:hideTable2();">Finished Product</a></li>
       </ul>
-    </div>
+  </div>
   </div>
 
       <div id="rawmats" class="tab-pane fade in active">
