@@ -38,6 +38,7 @@ Route::post('/inventory/rawmats/update','oversee@rawMatsUpdate');
 Route::post('/inventory/prod/update'.'oversee@prodUpdate');
 Route::post('/inventory/rawmats/delete','oversee@rawMatsDelete');
 Route::post('/inventory/prod/delete','oversee@prodDelete');
+Route::post('/joborder/create', 'oversee@jobOrderCreate');
 Auth::routes();
 });
 Route::get('/home', 'HomeController@index');

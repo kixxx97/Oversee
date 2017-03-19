@@ -20,101 +20,38 @@
       <div id="create" class="tab-pane fade in active">
           <div class="container-fluid createJOcontainer">
               <br><br>
+              <form method ="post" action ="{{url('/joborder/create')}}">
+              {{ csrf_field() }}
               <div class="row">
-                  <div class="col-md-3 portfolio-item">
+              {{ $ctr = 0 }}
+              @foreach($products as $product)
+              @if($ctr % 4 == 0)
+              <div class="row">
+              @endif
+              
+              <?php $ctr++; ?>
+              <div class="col-md-3 portfolio-item">
                       <div class="text-center">
                       <br><br>
-                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_classic.png"></center>
+                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/{{$ctr}}.png"></center>
                           <br>
                           <h4>Coca-Cola Classic</h4>
                           <span>Quantity:</span>
-                          <input type="text">
+                          <input type ="hidden" value ="{{$product->productID}}" name ="product[{{$ctr}}][id]"/>
+                          <input type="text" value ="0" name ="product[{{$ctr}}][qty]">
                           <br><br>
                       </div>
-                  </div>
-                  <div class="col-md-3 portfolio-item">
-                      <div class="text-center">
-                      <br><br>
-                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_zero.png"></center>
-                          <br>
-                          <h4>Coca-Cola Zero</h4>
-                          <span>Quantity:</span>
-                          <input type="text">
-                          <br><br>
-                      </div>
-                  </div>
-                  <div class="col-md-3 portfolio-item">
-                      <div class="text-center">
-                      <br><br>
-                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/sprite-soda-can.jpg"></center>
-                          <br>
-                          <h4>Sprite</h4>
-                          <span>Quantity:</span>
-                          <input type="text">
-                          <br><br>
-                      </div>
-                  </div>
-                  <div class="col-md-3 portfolio-item">
-                      <div class="text-center">
-                      <br><br>
-                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_caffeine_free.png"></center>
-                          <br>
-                          <h4>Caffeine-Free Coca-Cola Zero</h4>
-                          <span>Quantity:</span>
-                          <input type="text">
-                          <br><br>
-                      </div>
-                  </div>
               </div>
-
+                     
+              @if($ctr % 4 == 0)
+              </div>
+              @endif
+              @endforeach
+                  
+                                   
               <br><br>
-              <div class="row">
-                  <div class="col-md-3 portfolio-item">
-                      <div class="text-center">
-                      <br><br>
-                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_cherry_zero.png"></center>
-                          <br>
-                          <h4>Coca-Cola Cherry Zero</h4>
-                          <span>Quantity:</span>
-                          <input type="text">
-                          <br><br>
-                      </div>
-                  </div>
-                  <div class="col-md-3 portfolio-item">
-                      <div class="text-center">
-                      <br><br>
-                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_diet.png"></center>
-                          <br>
-                          <h4>Coca-Cola Diet</h4>
-                          <span>Quantity:</span>
-                          <input type="text">
-                          <br><br>
-                      </div>
-                  </div>
-                  <div class="col-md-3 portfolio-item">
-                      <div class="text-center">
-                      <br><br>
-                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_classic.png"></center>
-                          <br>
-                          <h4>Coca-Cola Classic</h4>
-                          <span>Quantity:</span>
-                          <input type="text">
-                          <br><br>
-                      </div>
-                  </div>
-                  <div class="col-md-3 portfolio-item">
-                      <div class="text-center">
-                      <br><br>
-                          <center><img class="img-responsive coke-product" style="width: 65%; border: 5px solid #2A2D35" src="assets/img/coke_zero.png"></center>
-                          <br>
-                          <h4>Coca-Cola Zero</h4>
-                          <span>Quantity:</span>
-                          <input type="text">
-                          <br><br>
-                      </div>
-                  </div>                  
-              </div><br><br>
-              <center><button class="btn text-center startjoborderbtn" data-toggle="modal" data-target="#startjoborderErrorModal">Start Job Order</button></center>
+              <center><input type ="submit" value = "Start Job Order" </center>
+              </form>
               <div class="row"><br><br></div>
           </div>
 

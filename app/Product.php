@@ -8,6 +8,8 @@ class Product extends Model
 {
     protected $table = 'product';
     
+    protected $primaryKey = 'productID';
+    
     protected $fillable = array('productDescription', 'productName','unitPrice','quantityAvailable','status');
     
     protected $guard = ['productID'];   

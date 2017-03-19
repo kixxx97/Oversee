@@ -41,15 +41,15 @@ In 1899, The Coca-Cola Company began franchised bottling operations in the Unite
 		<h3>Featured Items</h3>
 		<br><br><br>
 		
-		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_classic.png"><br><span class="itemName"><br>Coke Classic</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/1.png"><br><span class="itemName"><br>Coke Classic</span>
 		<br>Price: P99.75 per pc
 		</div>
 
-		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_zero.png"><br><span class="itemName"><br>Coke Zero</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/2.png"><br><span class="itemName"><br>Coke Zero</span>
 		<br>Price: P99.75 per pc
 		</div>
 
-		<div class="col-md-4"><img class="coke-product" src="assets/img/sprite-soda-can.jpg"><br><span class="itemName"><br>Sprite</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/3.png"><br><span class="itemName"><br>Sprite</span>
 		<br>Price: P99.75 per pc
 		</div>
 

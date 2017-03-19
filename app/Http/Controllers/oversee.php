@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Raw_Materials;
 use App\Product;
-
+use App\Job_Order;
+use App\Job_Order_details;
+use App\User;
+use App\Employee;
+use Illuminate\Support\Facades\Hash;
 
 class oversee extends Controller
 {
@@ -130,5 +134,40 @@ class oversee extends Controller
         
         
         return view('editProduct',compact('product'));
+    }
+    
+        public function jobOrderCreate(Request $request)
+    {
+        
+
+        $resp = Job_Order::create([
+           'customerID' => null,
+           'employeeID' => \Auth::user()->id,
+           'orderDateTime' => \Carbon\Carbon::now(),
+           'deliveryDateTime' => \Carbon\Carbon::now(),
+           'grandTotalAmount' => null,
+           'type' => 'Stock',
+           'status' => 'Ongoing',
+           'taxValue' => null
+        ]);
+        $jobOrderID = $resp->joborderID;
+        foreach($request->input('product') as $product)
+        {
+            if($product['qty'] != 0)
+            {
+            $prodID = $product['id'];
+            $prod = Product::where('productID',$prodID)->firstOrFail();
+            $total = $prod->unitPrice * $product['qty'];
+            
+            Job_Order_details::create([
+            'jobOrderID' => $jobOrderID,
+            'productID' => $prodID,
+            'quantityOrdered' => $product['qty'],
+            'totalAmount' => null,
+            'status' => 'Ongoing',
+            'dateTimeFinished' => \Carbon\Carbon::now()
+            ]);
+            }
+        }
     }
 }

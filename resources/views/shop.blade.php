@@ -27,19 +27,19 @@
 	<div class="container">
 	<div class="col-md-4">
 			<label class="pull-left">First Name</label>
-			<input type="text" class="form-control">
+			<input type="text" name = 'fname' class="form-control">
 
 			<label class="pull-left">Last Name</label>
-			<input type="text" class="form-control">
+			<input type="text" name = 'lname' class="form-control">
 
 			<label class="pull-left">Email Address</label>
-			<input type="text" class="form-control">
+			<input type="text" name = 'email' class="form-control">
 
 			<label class="pull-left">Contact Number</label>
-			<input type="text" class="form-control">
+			<input type="text" name = 'contactnum' class="form-control">
 
 			<label class="pull-left">Complete Address</label>
-			<input type="text" class="form-control">
+			<input type="text" name = 'address'class="form-control">
 	</div>
 		
 	</div>
@@ -48,17 +48,17 @@
 		<br><br><br>
 		<br>
 		
-		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_classic.png"><br><span class="itemName"><br>Coca-Cola Classic</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/1.png"><br><span class="itemName"><br>Coca-Cola Classic</span>
+    		<br>Price: P99.75 per pc
+    <br>Quantity <input type="text" name =""> <span class="redAsterisk">*20 per pack</span>
+		</div>
+
+		<div class="col-md-4"><img class="coke-product" src="assets/img/2.png"><br><span class="itemName"><br>Coca-Cola Zero</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
 
-		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_zero.png"><br><span class="itemName"><br>Coca-Cola Zero</span>
-		<br>Price: P99.75 per pc
-    <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
-		</div>
-
-		<div class="col-md-4"><img class="coke-product" src="assets/img/sprite-soda-can.jpg"><br><span class="itemName"><br>Sprite</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/3.png"><br><span class="itemName"><br>Sprite</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
@@ -69,17 +69,17 @@
 		<br><br><br>
 		<br>
 		
-		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_caffeine_free.png"><br><span class="itemName"><br>Caffeine-Free Coca-Cola Zero</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/4.png"><br><span class="itemName"><br>Caffeine-Free Coca-Cola Zero</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
 
-		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_diet.png"><br><span class="itemName"><br>Coca-Cola Diet</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/5.png"><br><span class="itemName"><br>Coca-Cola Diet</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
 
-		<div class="col-md-4"><img class="coke-product" src="assets/img/coke_cherry_zero.png"><br><span class="itemName"><br>Coca-Cola Cherry Zero</span>
+		<div class="col-md-4"><img class="coke-product" src="assets/img/6.png"><br><span class="itemName"><br>Coca-Cola Cherry Zero</span>
 		<br>Price: P99.75 per pc
     <br>Quantity <input type="text"> <span class="redAsterisk">*20 per pack</span>
 		</div>
