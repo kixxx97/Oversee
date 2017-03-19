@@ -135,18 +135,46 @@
                   <h4 class="modal-title">Add Workflow</h4>
               </div>
           <div class="modal-body">
-              <div class ="form-group">
-                 Workflow Title:<br>
-                 <input type ="text" name ="workflowtitle" class ="form-control"><br>
-                 Description:<br>
-                 <textarea style="resize: none;" class="form-control" rows="5"></textarea>
+              <div class="container-fluid">
+                  <div class="col-md-6">
+                    <div class ="form-group">
+                       Step Number:<br>
+                       <input type ="text" name ="stepnumber" class ="form-control">
+                    </div>
+                    <div class ="form-group">
+                       Title:<br>
+                       <input type ="text" name ="title" class ="form-control">
+                    </div>
+                    <div class="form-group">
+                       Description:<br>
+                       <textarea style="resize: none;" class="form-control" name="description" rows="5"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class ="form-group">
+                       Pre-requisite:<br>
+                       <input type ="text" name ="pre-prequisite" class ="form-control">
+                    </div>
+                    <div class ="form-group">
+                       Raw Material Requirement:<br>
+                       <input type ="text" name ="rawmatreq" class ="form-control">
+                    </div>
+                    <div class ="form-group">
+                       Man Hours:<br>
+                       <input type ="text" name ="manhours" class ="form-control">
+                    </div>
+                    <div class ="form-group">
+                       Pay rate:<br>
+                       <input type ="text" name ="payrate" class ="form-control">
+                    </div>
+                  </div>
               </div>
-          </div>
                    <div class="modal-footer">
                       <button type="submit" class="btn btn-primary"> Add Workflow</button>
                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                   </div>
            </form>
+          </div>
       </div>
     </div>                    
     </div>
