@@ -106,13 +106,15 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach($jobOrders as $jobOrder)
                 <tr>
-                  <td>200</td>
-                  <td>Customer</td>
-                  <td>ONGOING</td>
-                  <td>70%</td>
+                  <td>{{ $jobOrder->joborderID }}</td>
+                  <td>{{ $jobOrder->type }}</td>
+                  <td>{{ $jobOrder->status }}</td>
+                  <td></td>
                   <td><a href="#ongoingstep2table"><button class="btn" onclick="showstep2();">View</button></a></td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
 
