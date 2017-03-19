@@ -34,8 +34,7 @@
                   <th>Material Name</th>
                   <th>Inventory Count</th>
                   <th>Reorder Point</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               
@@ -46,8 +45,10 @@
                   <td>{{$rawMat->rawMaterialDescription}}</td>
                   <td>{{$rawMat->quantityAvailable}}</td>
                   <td>{{$rawMat->reOrderPoint}}</td>
-                  <td><a href="{{ 'rawMats/'.$rawMat->rawMaterialsID.'/edit' }}"><span class ="glyphicon glyphicon-edit"</span></td>
-                  <td><a href="{{ 'rawMats/'.$rawMat->rawMaterialsID.'/delete' }}"><span class ="glyphicon glyphicon-trash"</span></td>
+                  <td>
+                      <button type="button" data-toggle="modal" data-target="#rawMatsModalEdit"><span class ="glyphicon glyphicon-edit"</span></button>
+                      <a href="{{ 'rawMats/'.$rawMat->rawMaterialsID.'/delete' }}"><span class ="glyphicon glyphicon-trash"</span>
+                  </td>
               </tr>
               @endforeach
               </tbody>
@@ -71,8 +72,7 @@
                   <th>Product Description</th>
                   <th>Inventory Count</th>
                   <th>Unit Price</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -82,8 +82,10 @@
                   <td>{{$product->productDescription}}</td>
                   <td>{{$product->quantityAvailable}}</td>
                   <td>{{$product->unitPrice}}</td>
-                  <td><a href="{{ 'prod/'.$product->productID.'/edit' }}"><span class ="glyphicon glyphicon-edit"</span></td>
-                  <td><a href="{{ 'prod/'.$product->productID.'/delete' }}"><span class ="glyphicon glyphicon-trash"</span></td>
+                  <td>
+                      <a href="{{ 'prod/'.$product->productID.'/edit' }}"><span class ="glyphicon glyphicon-edit editBtnProd"</span>
+                      <a href="{{ 'prod/'.$product->productID.'/delete' }}"><span class ="glyphicon glyphicon-trash"</span>
+                  </td>
               </tr>
               @endforeach
               </tbody>
