@@ -29,16 +29,20 @@ class oversee extends Controller
     }
     public function employee()
     {
-        return view('employee');
+        $employees = Employee::join('users', 'employee.userID', '=', 'users.id')->where('status','active')->get();
+        return view('employee', compact('employees'));
     }
     public function storeEmployee(Request $request)
     {
         $empId = $request->input('empId');
+        $role = $request->input('role');
         $firstName = $request->input('firstName');
+        $middleInitial = $request->input('middleinitial');
         $lastName = $request->input('lastName');
+        $gender = $request->input('optradio');
+        $birthDate = $request->input('birthDate');
         $contactNum = $request->input('contactNum');
         $email = $request->input('email');
-        $assignedWork = $request->input('assignedWork');
         
         $userId = User::create
         ([
@@ -52,15 +56,17 @@ class oversee extends Controller
             "employeeID" => $empId,
             "firstName" => $firstName,
             "lastName" => $lastName,
-            "middleInitial" => "",
-            "gender" => "",
-            "birthdate" => \Carbon\Carbon::now(),
+            "middleInitial" => $middleInitial,
+            "gender" => $gender,
+            "birthdate" => $birthDate,
             "hiredate" => \Carbon\Carbon::now(),
-            "status" => "",
-            "userID" => $userId
+            "status" => "active",
+            "userID" => $userId,
+            "contactNumber" => $contactNum,
+            "role" => $role
         ]);
         
-        return view('employee');
+        return redirect('employee');
     }
     public function inventory()
     {
@@ -70,7 +76,8 @@ class oversee extends Controller
     }
     public function jobOrder()
     {
-        return view('joborder');
+        $products = Product::where('status','active')->get();
+        return view('joborder', compact('products'));
     }
     public function purchase()
     {

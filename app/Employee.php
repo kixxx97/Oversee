@@ -9,7 +9,7 @@ class Employee extends Model
     protected $table = 'employee';
     
     protected $fillable = [
-        'employeeID','firstName','lastName','middleInitial','gender','birthdate','hiredate','status','userID'
+        'employeeID','firstName','lastName','middleInitial','gender','birthdate','hiredate','status','userID','contactNumber','role'
     ];
     public function jobOrder()
     {

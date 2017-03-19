@@ -21,162 +21,26 @@
             <th>First Name</th>
             <th>Contact Number</th>
             <th>Email</th>
-            <th>Assigned Work</th>
+            <th>Role</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
         <tbody>
+          @foreach ($employees as $employee)
+          
           <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#">><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></a></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-          </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
+            <td>{{ $employee->employeeID }}</td>
+            <td>{{ $employee->lastName }}</td>
+            <td>{{ $employee->firstName }}</td>
+            <td>{{ $employee->contactNumber }}</td>
+            <td>{{ $employee->email }}</td>
+            <td>{{ $employee->role }}</td>
             <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></td>
             <td><a href="#"><span class="glyphicon glyphicon-trash"></span></td>
           </tr>
-          <tr>
-            <td>100</td>
-            <td>Canedo</td>
-            <td>Gil Ralph</td>
-            <td>09336310984</td>
-            <td>john@example.com</td>
-            <td>Limpyo Balay</td>
-            <td><a href="#" data-toggle="modal" data-target="#editEmpModal"><span class="glyphicon glyphicon-edit editBtnEmployee"></span></td>
-            <td><a href="#"><span class="glyphicon glyphicon-trash"></span></td>
-          </tr>
+          
+          @endforeach
         </tbody>
       </table>
       </div>
@@ -207,8 +71,8 @@
                   <input id="employeeID" type="text" name="empId" required="required" class="form-control">
                 </div>
                 <div class="col-md-6">
-                  <label for="assignWork">Assigned Work</label>
-                  <input id="assignWork" type="text" name="assignedWork" required="required" class="form-control">
+                  <label for="assignWork">Role</label>
+                  <input id="assignWork" type="text" name="role" required="required" class="form-control">
                 </div>
               </div>
               <br>
@@ -231,8 +95,8 @@
                 <div class="col-md-4">
                   <label for="gender">Gender</label>
                   <br>
-                  <label class="radio-inline"><input type="radio" name="optradio">Male</label>
-                  <label class="radio-inline"><input type="radio" name="optradio">Female</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="Male">Male</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="Female">Female</label>
                 </div>
                 <div class="col-md-8">
                   <label for="birthdate">Birthdate</label>
